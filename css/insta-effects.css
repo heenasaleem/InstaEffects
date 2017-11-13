@@ -1,0 +1,104 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.insta-image {
+  margin-bottom: 0px;
+  position: relative;
+  float: left;
+  width: 100%;
+  z-index: 2; }
+  .insta-image .insta-image-inner {
+    position: relative;
+    float: left; }
+  .insta-image img, .insta-image canvas {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    float: left;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1; }
+  .insta-image .insta-toggle {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    z-index: 2;
+    background: #fff;
+    padding: 2px 10px;
+    line-height: 1.5;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden; }
+    @media screen and (max-width: 768px) {
+      .insta-image .insta-toggle {
+        opacity: 1;
+        visibility: visible;
+        right: 10px; } }
+  .insta-image:hover .insta-toggle, .insta-image:focus .insta-toggle, .insta-image:active .insta-toggle, .insta-image.active .insta-toggle {
+    float: right;
+    right: 10px;
+    opacity: 1;
+    visibility: visible; }
+  .insta-image .insta-filters {
+    background: #fff;
+    padding: 0px 5px;
+    /*margin: 5px 0 0 -10px;*/
+    margin: 0px 0 0 -10px; }
+    .insta-image .insta-filters li {
+      padding: 0;
+      /*margin: 0 5px 10px 5px;*/
+      margin: 0 5px 0px 5px;
+      display: block;
+      float: left;
+      position: relative;
+      overflow: hidden; }
+      .insta-image .insta-filters li:before {
+        font-family: "FontAwesome";
+        content: "\f00c";
+        color: #2AAF74;
+        position: absolute;
+        left: 50%;
+        font-size: 14px;
+        top: 50%;
+        margin-left: -6px;
+        margin-top: -12px;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        border: none;
+        z-index: 2;
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;
+        opacity: 0;
+        visibility: hidden; }
+      .insta-image .insta-filters li a {
+        float: left;
+        width: 60px;
+        border-radius: 7px !important;
+        opacity: 1;
+        z-index: 2;
+        position: relative; }
+        .insta-image .insta-filters li a:hover, .insta-image .insta-filters li a:focus, .insta-image .insta-filters li a:active {
+          opacity: .6; }
+        .insta-image .insta-filters li a > canvas, .insta-image .insta-filters li a > img {
+          margin-bottom: 0 !important; }
+      .insta-image .insta-filters li.active a {
+        opacity: .1; }
+      .insta-image .insta-filters li.active:before {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+      .insta-image .insta-filters li img, .insta-image .insta-filters li canvas {
+        float: left;
+        border-radius: 4px;
+        margin-bottom: 0px; }
+      .insta-image .insta-filters li canvas {
+        max-width: 100%; }
